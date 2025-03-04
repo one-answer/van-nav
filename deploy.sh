@@ -6,4 +6,4 @@ docker push aolifu/nav:$VERSION
 docker stop nav
 docker rm nav
 
-docker run -d --restart=unless-stopped --name=nav -p 11010:6412 aolifu/nav:$VERSION
+docker run -d --restart=unless-stopped --name=nav -p 11010:6412 -v /root/nav:/app/data aolifu/nav:$VERSION
