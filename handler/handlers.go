@@ -438,7 +438,7 @@ func ManifastHanlder(c *gin.Context) {
 	})
 
 	if title == "" {
-		title = "Van nav"
+		title = "狗窝导航"
 	}
 	c.JSON(200, gin.H{
 		"short_name":       title,

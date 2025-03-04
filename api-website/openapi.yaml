@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
-  title: Van Nav API
-  description: Van Nav 导航系统的 API 文档
+  title: 狗窝导航 API
+  description: 狗窝导航 导航系统的 API 文档
   version: 1.0.0
 
 servers:
