@@ -1,4 +1,4 @@
-# Van Nav
+# 狗窝导航
 
 一个轻量的导航站，现在有搜索引擎集成了，很适合作为主页使用。有配套的[浏览器插件](https://github.com/Mereithhh/van-nav-extension)和 API。 [在线体验](https://demo-tools.mereith.com) (总有人改后台数据，后台密码就不放出来了)
 
