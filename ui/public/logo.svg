@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <!-- Background circle -->
+    <circle cx="256" cy="256" r="240" fill="#f0f0f0" stroke="#555" stroke-width="12" />
+
+    <!-- Navigation pointer element -->
+    <g transform="translate(256, 256) rotate(45)">
+        <polygon points="0,-160 40,-80 0,-100 -40,-80" fill="#4285f4" stroke="#2b579a" stroke-width="8" stroke-linejoin="round" />
+    </g>
+
+    <!-- Direction lines -->
+    <g stroke="#555" stroke-width="10" stroke-linecap="round">
+        <line x1="256" y1="136" x2="256" y2="256" />
+        <line x1="136" y1="256" x2="256" y2="256" />
+        <line x1="256" y1="256" x2="376" y2="256" />
+        <line x1="256" y1="256" x2="256" y2="376" />
+    </g>
+
+    <!-- Central hub -->
+    <circle cx="256" cy="256" r="40" fill="#ff6b6b" stroke="#d24848" stroke-width="8" />
+
+    <!-- Small navigation dots -->
+    <circle cx="136" cy="256" r="15" fill="#4c6ef5" />
+    <circle cx="376" cy="256" r="15" fill="#4c6ef5" />
+    <circle cx="256" cy="136" r="15" fill="#4c6ef5" />
+    <circle cx="256" cy="376" r="15" fill="#4c6ef5" />
+
+    <!-- Inner ring - for style -->
+    <circle cx="256" cy="256" r="120" fill="none" stroke="#aaa" stroke-width="5" stroke-dasharray="15,10" />
+</svg>
