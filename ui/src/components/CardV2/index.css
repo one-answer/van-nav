@@ -1,18 +1,86 @@
 .select-tag {
     user-select: none;
 }
+
+.card-box {
+    position: relative;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-card-bg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card-box:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    background-color: var(--color-card-hover-bg);
+}
+
+.card-box:active {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    padding: var(--space-4);
+}
+
+.card-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-left > img {
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.card-box:hover .card-left > img {
+    transform: scale(1.05);
+}
+
+.card-right-title {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.card-right-bottom {
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.card-tag {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .card-index {
     position: absolute;
     right: 8px;
     top: 8px;
-}
-.card-box {
-    position: relative;
-}
-.card-index {
-    color: #272e3b;
+    color: var(--color-text-primary);
+    background-color: var(--color-primary-light);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
 }
 
 body.dark-mode .card-index {
-    color: rgba(255,255,255, 0.6)
+    color: var(--color-text-primary);
+    background-color: var(--color-primary-light);
 }
