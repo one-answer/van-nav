@@ -173,6 +173,38 @@ const Content = (props: any) => {
 
   };
 
+  // 生成动态页面标题和描述
+  const getPageTitle = () => {
+    const baseTitle = data?.setting?.title ?? "狗窝导航";
+    if (searchString) {
+      return `${searchString} - 搜索结果 | ${baseTitle}`;
+    } else if (currTag && currTag !== "全部工具") {
+      return `${currTag} | ${baseTitle}`;
+    }
+    return baseTitle;
+  };
+
+  const getPageDescription = () => {
+    const baseDesc = "专注收录永久完全免费的优质网站和在线工具，无需付费，提供高效便捷的互联网资源导航，让您畅享免费服务。";
+    if (searchString) {
+      return `在狗窝导航中搜索"${searchString}"的结果。${baseDesc}`;
+    } else if (currTag && currTag !== "全部工具") {
+      return `浏览狗窝导航中的${currTag}分类。${baseDesc}`;
+    }
+    return baseDesc;
+  };
+
+  // 生成规范链接
+  const getCanonicalUrl = () => {
+    const baseUrl = "https://nav.aolifu.org";
+    if (searchString) {
+      return `${baseUrl}?search=${encodeURIComponent(searchString)}`;
+    } else if (currTag && currTag !== "全部工具") {
+      return `${baseUrl}?tag=${encodeURIComponent(currTag)}`;
+    }
+    return baseUrl;
+  };
+
   return (
     <>
       <Helmet>
@@ -183,7 +215,45 @@ const Content = (props: any) => {
             data?.setting?.favicon ?? "favicon.ico"
           }
         />
-        <title>{data?.setting?.title ?? "狗窝导航"}</title>
+        <title>{getPageTitle()}</title>
+        <meta name="description" content={getPageDescription()} />
+        <link rel="canonical" href={getCanonicalUrl()} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={getCanonicalUrl()} />
+        <meta property="og:title" content={getPageTitle()} />
+        <meta property="og:description" content={getPageDescription()} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={getCanonicalUrl()} />
+        <meta name="twitter:title" content={getPageTitle()} />
+        <meta name="twitter:description" content={getPageDescription()} />
+
+        {/* 结构化数据 - BreadcrumbList */}
+        {currTag && currTag !== "全部工具" && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "首页",
+                  "item": "https://nav.aolifu.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": currTag,
+                  "item": `https://nav.aolifu.org/?tag=${encodeURIComponent(currTag)}`
+                }
+              ]
+            })}
+          </script>
+        )}
       </Helmet>
       <div className="topbar">
         <div className="content">

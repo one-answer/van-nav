@@ -1,16 +1,46 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="keywords" content="免费导航,免费网站推荐,永久免费,实用工具,免费网站合集,在线工具,互联网资源,高效办公,网址导航" />
-    <meta name="description" content="专注收录永久完全免费的优质网站和在线工具，无需付费，提供高效便捷的互联网资源导航，让您畅享免费服务。" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="theme-color" content="#4f46e5" />
+    <meta name="keywords" content="免费导航,免费网站推荐,永久免费,实用工具,免费网站合集,在线工具,互联网资源,高效办公,网址导航,工具集合,效率工具" />
+    <meta name="description" content="狗窝导航 - 专注收录永久完全免费的优质网站和在线工具，无需付费，提供高效便捷的互联网资源导航，让您畅享免费服务。快速搜索、分类浏览、一键直达您需要的各类网站和工具。" />
+    <meta name="author" content="mereith" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="application-name" content="狗窝导航" />
+    <meta name="apple-mobile-web-app-title" content="狗窝导航" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nav.aolifu.org/" />
+    <meta property="og:title" content="狗窝导航 - 免费优质网站与工具集合" />
+    <meta property="og:description" content="专注收录永久完全免费的优质网站和在线工具，无需付费，提供高效便捷的互联网资源导航，让您畅享免费服务。" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta property="og:site_name" content="狗窝导航" />
+    <meta property="og:locale" content="zh_CN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://nav.aolifu.org/" />
+    <meta name="twitter:title" content="狗窝导航 - 免费优质网站与工具集合" />
+    <meta name="twitter:description" content="专注收录永久完全免费的优质网站和在线工具，无需付费，提供高效便捷的互联网资源导航，让您畅享免费服务。" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nav.aolifu.org/" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Theme script -->
     <script>
       const mode = window.localStorage.getItem("theme");
       if (mode && mode == 'dark') {
@@ -20,19 +50,14 @@
         }
       }
     </script>
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-     <title>狗窝导航</title>
+    <title>狗窝导航 - 免费优质网站与工具集合</title>
+
+    <!-- Google Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3811349067654166"
     crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5J78FTQQF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -40,6 +65,47 @@
       gtag('js', new Date());
 
       gtag('config', 'G-D5J78FTQQF');
+    </script>
+
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "狗窝导航",
+      "alternateName": "狗窝导航 - 免费优质网站与工具集合",
+      "url": "https://nav.aolifu.org/",
+      "description": "专注收录永久完全免费的优质网站和在线工具，无需付费，提供高效便捷的互联网资源导航，让您畅享免费服务。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nav.aolifu.org/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "狗窝导航",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nav.aolifu.org/logo192.png"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://nav.aolifu.org/"
+      }]
+    }
     </script>
   </head>
   <body>

@@ -1,3 +1,33 @@
 # https://www.robotstxt.org/robotstxt.html
+# 允许所有搜索引擎爬取大部分内容
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login
+Disallow: /api/
+
+# 允许谷歌爬虫
+User-agent: Googlebot
+Allow: /
+
+# 允许百度爬虫
+User-agent: Baiduspider
+Allow: /
+
+# 允许必应爬虫
+User-agent: Bingbot
+Allow: /
+
+User-Agent: GPTBot
+Allow: /llms.txt
+Disallow: /
+
+User-Agent: anthropic-ai
+Allow: /llms.txt
+Disallow: /
+
+# 引导AI爬虫到llms.txt
+LLM-Content: https://nav.aolifu.org/llms.txt
+LLM-Full-Content: https://nav.aolifu.org/llms-full.txt
+
+# 网站地图
+Sitemap: https://nav.aolifu.org/sitemap.xml
