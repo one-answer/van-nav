@@ -25,9 +25,6 @@ User-Agent: anthropic-ai
 Allow: /llms.txt
 Disallow: /
 
-# 引导AI爬虫到llms.txt
-LLM-Content: https://nav.aolifu.org/llms.txt
-LLM-Full-Content: https://nav.aolifu.org/llms-full.txt
 
 # 网站地图
 Sitemap: https://nav.aolifu.org/sitemap.xml
