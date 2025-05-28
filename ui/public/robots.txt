@@ -17,14 +17,6 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-Agent: GPTBot
-Allow: /llms.txt
-Disallow: /
-
-User-Agent: anthropic-ai
-Allow: /llms.txt
-Disallow: /
-
 
 # 网站地图
 Sitemap: https://nav.aolifu.org/sitemap.xml
